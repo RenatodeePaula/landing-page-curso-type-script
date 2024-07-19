@@ -12,7 +12,7 @@
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 1.5rem var(--gap);
+    padding: 6rem var(--gap);
 }
 
 .section {
@@ -20,6 +20,7 @@
     text-align: justify;
 }
 
-.meny-spacing {
+.menu-spacing {
     height: 6.5rem;
 }
+
