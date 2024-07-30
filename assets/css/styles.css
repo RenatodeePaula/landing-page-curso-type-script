@@ -37,12 +37,11 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-
     min-height: 100vh;
 }
 
 
-/* ====================work Top 3======================== */
+/* ==================== Work Top 3======================== */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -74,15 +73,141 @@
     font-size: 7.5rem;
     font-style: italic;
     top: 1rem;
-    left: -1rem;
+    left: -2rem;
     rotate: 9deg;   
 }
 
+/* ====================Gallery======================== */
+
+.gallery-img {   
+    max-width: 36rem;
+    max-height: 36rem;
+    transition: 4s;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+    
+}
+.gallery-img img:hover {
+    transform: translate(-3%, 3%)scale(1.1) ;
+   
+}
 
 
+/* ====================Contact US======================== */
+.contact-us-form {
+    grid-column: span 2;
+
+} 
+
+.contact-us-form fieldset {
+    border: none;
+    
+   
+}
+
+legend {
+    font-style: italic;
+}
+
+#contact-us .inputs-div {
+    display: grid;
+    grid-template-areas:
+     'first last'              
+     'email email'
+     'message message'
+    ;
+    gap: var(--gap);
+
+    margin-top: var(--gap);
+}
+
+#first-div {
+    grid-area: first;
+}
 
 
+#last-div {
+    grid-area: last;
 
+}
+
+#email-div {
+    grid-area: email;
+
+}
+
+#message-div {
+    grid-area: message;
+    
+}
+
+input,
+textarea{
+    padding: 1.5rem 2rem;
+    width: 100%; 
+    font-size: var(--gap);  
+    color: var(--primary-color);
+    
+}
+
+textarea {
+    min-height: 10.14rem;
+}
+
+.form-label {     
+    display: block;
+}
+
+#contact-us button {
+    padding: 1.8rem 3.5rem;
+    font-size: var(--gap); 
+    margin-top: var(--gap); 
+   
+    cursor: pointer;
+    border: 0.6rem solid var(--white-bg);
+
+    background-color: var(--primary-color);
+    color: var(--white-bg);
+
+    transition: ease-in-out 0.4s;
+}
+
+#contact-us button:hover {
+    color: var(--primary-color);
+    background-color: var(--white-bg);
+}
+
+
+/* ==================== Responsive ======================== */
+
+@media (max-width: 800px) {
+    .intro-content{
+        grid-template-columns: 1fr;
+    }
+
+    #contact-us .inputs-div {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .form-group {
+        min-width: 100%;
+    }
+
+    legend {
+        display: flex;
+        text-align: left;
+    }
+
+    .top3-grid {
+        display: flex;
+        flex-flow: wrap;
+    }
+}
 
 
 /* 

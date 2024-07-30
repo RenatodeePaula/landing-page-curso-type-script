@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+    position: relative;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: var(--gap);
+}
+
+footer a span {
+    color: var(--secundary-color);
+}
+
+footer::after {
+    content: attr(data-content) '<i class="ph ph-caret-up"></i>';
+    z-index: 1000;
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
