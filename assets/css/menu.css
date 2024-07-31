@@ -1,3 +1,7 @@
+aside {
+    z-index: 1000;
+}
+
 aside div { 
     display:flex;
     justify-content: space-between;
@@ -57,4 +61,5 @@ aside div {
 
 #main-menu {
     padding: 1rem var(--gap);
+    z-index: 1000;
 }

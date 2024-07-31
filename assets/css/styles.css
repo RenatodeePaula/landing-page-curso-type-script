@@ -14,7 +14,7 @@
 .intro-img {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    
 }
 
 .intro-img img {
@@ -78,7 +78,6 @@
 }
 
 /* ====================Gallery======================== */
-
 .gallery-img {   
     max-width: 36rem;
     max-height: 36rem;
@@ -88,24 +87,21 @@
 
 .gallery-img img {
     transition: all 300ms ease-in-out;
-    
-}
-.gallery-img img:hover {
-    transform: translate(-3%, 3%)scale(1.1) ;
-   
+    width: 100%;
 }
 
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.1) ;
+   
+}
 
 /* ====================Contact US======================== */
-.contact-us-form {
-    grid-column: span 2;
-
-} 
-
+.contact-content {
+    width: 100%;
+}
 .contact-us-form fieldset {
-    border: none;
+    border: none;   
     
-   
 }
 
 legend {
@@ -161,6 +157,10 @@ textarea {
     display: block;
 }
 
+.top3-content {
+    min-width: 100%;
+}
+
 #contact-us button {
     padding: 1.8rem 3.5rem;
     font-size: var(--gap); 
@@ -171,8 +171,9 @@ textarea {
 
     background-color: var(--primary-color);
     color: var(--white-bg);
-
-    transition: ease-in-out 0.4s;
+    max-width: 29rem;
+    
+    transition: ease-in-out 0.4s;    
 }
 
 #contact-us button:hover {
@@ -182,6 +183,17 @@ textarea {
 
 
 /* ==================== Responsive ======================== */
+@media (max-width: 980px) {
+    #gallery .grid {
+     grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    #gallery .grid .gallery-img {        
+        min-width: 100%;        
+    }
+   
+}
 
 @media (max-width: 800px) {
     .intro-content{
@@ -194,10 +206,7 @@ textarea {
         justify-content: center;
     }
 
-    .form-group {
-        min-width: 100%;
-    }
-
+   
     legend {
         display: flex;
         text-align: left;
@@ -207,7 +216,25 @@ textarea {
         display: flex;
         flex-flow: wrap;
     }
+
+    #gallery .grid {
+        grid-template-columns:  1fr;
+        justify-items: center;      
+    }
+    
+    #gallery .grid .gallery-img {
+        /* border: 5px solid blue; */
+        width: 100%;        
+    }
+
+     fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
+
 
 
 /* 
