@@ -17,23 +17,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
 
    
   </head>
-
   <body>
-    <aside  class="menu white-bg">
-      <div id='main-menu'class="main-content">
-        <h1>
+    <input id="close-menu" class="close-menu" type="checkbox" role="button" aria-label="Close menu">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside id="menu"  class="menu white-bg">
+      <div id='main-menu'class="main-content" onclick="document.querySelector('#close-menu').checked=false">
+        <h1 >
           <a href="#">LOGO</a>
         </h1>
         <nav>
@@ -245,7 +244,7 @@
               <td></td>
               <td></td>
              
-              <td >Testando</td>
+              <td></td>
             </tr>
           </tfoot>
         </table>
