@@ -1,9 +1,7 @@
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-
-   
+    align-items: center;   
     position: relative;
 }
 
@@ -17,3 +15,24 @@ footer a span {
     color: var(--secundary-color);
 }
 
+/*==================== Back-to-top ======================== */
+
+.back-to-top {
+   position: fixed;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+    bottom: 2rem;
+    right: 2rem;
+    width: 0.2rem;
+    height:0.2rem;
+    color: white;   
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    border: 0.1rem solid var(--light-gray-color);
+}
